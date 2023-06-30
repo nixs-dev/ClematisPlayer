@@ -1,0 +1,158 @@
+@import "../styles/Fonts";
+@import "../styles/Buttons";
+
+
+$main-color: #bf00ff;
+
+
+#app-main {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+    
+
+    #app-main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        backdrop-filter: blur(10px);
+
+        #app-logo {
+            width: 13%;
+            height: auto;
+        }
+
+        #app-main-header-options {
+            display: flex;
+            min-width: 30%;
+            gap: 4rem;
+
+            .header-option {
+                color: white;
+                font-size: 1.5rem;
+                font-family: Plante;
+            }
+        }
+
+        #contacts {
+            display: flex;
+            gap: 0.2rem;
+        }
+    }
+
+    #app-main-body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .section {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+        #welcome.section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+        
+                background-image: url("../images/main_background.jpg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+        
+                filter: brightness(30%);
+            }
+
+            #welcome-message {
+                display: flex;
+                flex-direction: column;
+
+                width: 50%;
+                text-align: center;
+
+                #pre-title {
+                    font-family: Cursive;
+                    font-style: italic;
+                    font-size: 1rem;
+                    color: white;
+                }
+
+                #title {
+                    font-family: Plante;
+                    font-size: 5rem;
+
+                    color: $main-color;
+                }
+
+                #description {
+                    color: white;
+                }
+
+                div {
+                    display: flex;
+                    gap: 0.5rem;
+
+                    a {
+                        flex: 1 0;
+                        display: block;
+                        font-size: large;
+
+                        padding: 1rem 1rem;
+                    }
+                }
+            }
+        }
+
+        #features.section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-color: rgb(20, 20, 20);
+
+
+            #features-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 80%;
+                gap: 2rem;
+
+                .feature-frame {
+                    display: flex;
+                    
+                    padding: 2rem;
+                    border-radius: 1rem;
+
+                    i {
+                        color: $main-color;
+                    }
+
+                    p {
+                        color: white;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}

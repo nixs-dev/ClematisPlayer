@@ -1,0 +1,24 @@
+@import "../styles/Modal";
+
+
+#loading-modal {
+    .modal-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #loading-bar {
+            width: 80%;
+            height: 2rem;
+            
+            background-color: white;
+
+            #progress-bar {
+                background-color: $main-color;
+            
+                width: 50%;
+                height: 100%;
+            }
+        }
+    }
+}

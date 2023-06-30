@@ -1,0 +1,60 @@
+@import "../styles/Fonts";
+@import "../styles/Buttons";
+
+#app-error {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    width: 100dvw;
+    height: 100dvh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        background-image: url("../images/error_background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        filter: brightness(10%);
+    }
+
+    #app-error-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        flex: 1 1;
+
+        #center-information {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 40%;
+            height: 70%;
+
+            span {
+                font-family: Plante;
+                font-size: 10rem;
+
+                color: white;
+            }
+            
+            .primary-button {
+                padding: 1rem;
+            }
+        }
+    }
+}
